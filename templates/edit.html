@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><title>Editar</title></head>
+<body>
+    <h2>Editar Mensagem</h2>
+    <form method="post">
+        <textarea name="conteudo" rows="4" cols="50" required>{{ mensagem.conteudo }}</textarea><br>
+        <button type="submit">Atualizar</button>
+    </form>
+    <a href="{{ url_for('index') }}">Voltar</a>
+</body>
+</html>

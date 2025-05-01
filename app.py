@@ -27,7 +27,6 @@ def get_mensagem_by_id(id):
 
 @app.route('/api/mensagens/', methods=['POST'])
 def criar_mensagem():
-    return f'teste'
     data = request.get_json()
     nova = Mensagem(conteudo=data['conteudo'])
     db.session.add(nova)

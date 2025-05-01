@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mensagens</title>
+</head>
+<body>
+    <h1>Mensagens</h1>
+    <a href="{{ url_for('add') }}">Nova Mensagem</a>
+    <ul>
+        {% for msg in mensagens %}
+            <li>
+                {{ msg.conteudo }}
+                [<a href="{{ url_for('edit', id=msg.id) }}">Editar</a>]
+                [<a href="{{ url_for('delete', id=msg.id) }}">Deletar</a>]
+            </li>
+        {% else %}
+            <li>Nenhuma mensagem cadastrada.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
